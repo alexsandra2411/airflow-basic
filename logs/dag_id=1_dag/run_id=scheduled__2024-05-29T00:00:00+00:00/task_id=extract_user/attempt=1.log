@@ -1,0 +1,26 @@
+[2024-05-30T06:57:37.262+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 1_dag.extract_user scheduled__2024-05-29T00:00:00+00:00 [queued]>
+[2024-05-30T06:57:37.681+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: 1_dag.extract_user scheduled__2024-05-29T00:00:00+00:00 [queued]>
+[2024-05-30T06:57:37.689+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-05-30T06:57:37.693+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2024-05-30T06:57:37.737+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-05-30T06:57:38.048+0000] {taskinstance.py:1383} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2024-05-29 00:00:00+00:00
+[2024-05-30T06:57:38.131+0000] {standard_task_runner.py:55} INFO - Started process 7186 to run task
+[2024-05-30T06:57:38.175+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', '1_dag', 'extract_user', 'scheduled__2024-05-29T00:00:00+00:00', '--job-id', '69', '--raw', '--subdir', 'DAGS_FOLDER/1_dag.py', '--cfg-path', '/tmp/tmpph23_vbh']
+[2024-05-30T06:57:38.221+0000] {standard_task_runner.py:83} INFO - Job 69: Subtask extract_user
+[2024-05-30T06:57:40.012+0000] {task_command.py:376} INFO - Running <TaskInstance: 1_dag.extract_user scheduled__2024-05-29T00:00:00+00:00 [running]> on host 4b56679d13b8
+[2024-05-30T06:57:41.591+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=1_dag
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2024-05-29T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-05-29T00:00:00+00:00
+[2024-05-30T06:57:41.602+0000] {http.py:121} INFO - Calling HTTP method
+[2024-05-30T06:57:41.741+0000] {base.py:71} INFO - Using connection ID 'user_api' for task execution.
+[2024-05-30T06:57:41.752+0000] {http.py:148} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2024-05-30T06:57:42.548+0000] {http.py:125} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"احسان","last":"نجاتی"},"location":{"street":{"number":2683,"name":"جلال آل احمد"},"city":"پاکدشت","state":"کرمانشاه","country":"Iran","postcode":22084,"coordinates":{"latitude":"13.7500","longitude":"-5.6053"},"timezone":{"offset":"-2:00","description":"Mid-Atlantic"}},"email":"hsn.njty@example.com","login":{"uuid":"2a542dd2-0098-4515-8b1c-b16a16e5236f","username":"beautifulpeacock770","password":"reng","salt":"abLGxhus","md5":"b2f732a58cb0a1f241a778e9693503ff","sha1":"62141a7f2b12fe8331df6ce36bd9dfe44760b0bc","sha256":"83696423c1a7fa58097d60a887672fda224c7fbbba0da3e2aec03355debec583"},"dob":{"date":"1949-03-05T01:48:41.125Z","age":75},"registered":{"date":"2010-12-10T09:25:31.546Z","age":13},"phone":"014-93123910","cell":"0975-031-3152","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/men/66.jpg","medium":"https://randomuser.me/api/portraits/med/men/66.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/66.jpg"},"nat":"IR"}],"info":{"seed":"02221233f34fa3bd","results":1,"page":1,"version":"1.4"}}
+[2024-05-30T06:57:43.006+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=1_dag, task_id=extract_user, execution_date=20240529T000000, start_date=20240530T065737, end_date=20240530T065743
+[2024-05-30T06:57:43.907+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2024-05-30T06:57:44.412+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

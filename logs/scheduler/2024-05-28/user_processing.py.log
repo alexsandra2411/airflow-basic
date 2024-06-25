@@ -1,0 +1,14 @@
+[2024-05-28T08:38:02.334+0000] {processor.py:154} INFO - Started process (PID=4331) to work on /opt/airflow/dags/user_processing.py
+[2024-05-28T08:38:02.846+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/user_processing.py for tasks to queue
+[2024-05-28T08:38:03.193+0000] {logging_mixin.py:120} INFO - [2024-05-28T08:38:03.192+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/user_processing.py
+[2024-05-28T08:38:27.353+0000] {logging_mixin.py:120} INFO - [2024-05-28T08:38:26.624+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/user_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/user_processing.py", line 3, in <module>
+    from airflow.providers.postgres.operators.postgres import PostgesOperator
+ImportError: cannot import name 'PostgesOperator' from 'airflow.providers.postgres.operators.postgres' (/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py)
+[2024-05-28T08:38:27.415+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/user_processing.py
+[2024-05-28T08:38:29.985+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/user_processing.py took 28.596 seconds
